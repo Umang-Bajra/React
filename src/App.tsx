@@ -18,7 +18,7 @@ function App() {
     <>
    
     <div className='flex w-full h-screen fex-row justify-between gap-8'>
-      <div className='flex flex-col h-screen w-1/4 gap-2'>
+      <div className='flex flex-col h-screen w-1/4 gap-2 border'>
           <TopSidebar/> 
           <SideBar/>
       </div> 
