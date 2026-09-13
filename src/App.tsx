@@ -4,37 +4,42 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
-
+import State from './component/State.tsx'
 import TopSidebar from './component/TopSidebar.tsx'
 import SideBar from './component/SideBar.tsx'
 import TopNavBar from './component/TopNavBar.tsx'
 import SearchBar from './component/SearchBar.tsx'
 import TempText from './component/TempText.tsx'
 import BotText from './component/BotText.tsx'
+import Position from './component/Position.tsx'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-   
-    <div className='flex w-full h-screen fex-row justify-between gap-8'>
+     {/* <Position/> */}
+
+     <div className='flex w-full h-screen fex-row justify-between gap-8'>
       <div className='flex flex-col h-screen w-1/4 gap-2 border'>
           <TopSidebar/> 
           <SideBar/>
       </div> 
         <div className="flex flex-row justify-between h-screen w-full">
-          <div className='flex flex-col justify-between w-full'>
+          <div className='flex flex-col justify-between w-full h-screen '>
             <TopNavBar/>
-            <div className='flex flex-col items-centerd justify-center h-screen w-full '>
-          <TempText/>
-          <SearchBar/> 
-          <BotText/>
+            <div className='flex flex-col justify-center h-screen w-full gap-4'>
+              <TempText/>
+              <SearchBar/> 
+              <BotText/>
           </div>
           </div>
         </div>
   </div>
     </>
   )
+  // return(
+  //   <State/>
+  // )
 }
 
 export default App
